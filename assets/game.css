@@ -1,0 +1,74 @@
+body{
+  color: rgb(98, 71, 170);
+}
+
+.choice-container {
+  display: flex;
+  margin-bottom: 10px;
+  width: 100%;
+  border-radius: 4px;
+  background: rgb(104, 202, 158);
+  font-size: 30px;
+  min-width: 10px;
+}
+
+.choice-container:hover {
+  cursor:pointer;
+  box-shadow: 0 0.4rem 1.4rem 0 rgb(160, 108, 213);
+  transform: scale(1.01);
+  transform: transform 100ms;
+}
+
+.choice-prefix{
+  padding: 2rem 2.5rem;
+  color: rgb(98, 71, 170);
+}
+
+.choice-text{
+  padding: 50px;
+  width: 100%;
+}
+
+.correct {
+  background: linear-gradiant(32deg)
+}
+
+.incorrect {
+  background: linear-gradiant(32deg)
+}
+
+#hud{
+  display: flex;
+  justify-content: space-between;
+}
+
+.hud-prefix{
+  text-align: center;
+  font-size: 20px;
+}
+
+.hud-main-text{
+  text-align: center;
+}
+
+#progressBar{
+  width: 600px;
+  height: 100px;
+  height: 100px;
+  border: 3.0px solid rgb(213, 225, 77);
+  border-radius: 20px;
+  overflow: hidden;
+}
+#progressBarFull{
+  height: 100%;
+  background-color: rgb(218, 235, 89);
+}
+
+
+@media screen and (max-width: 768px) {
+  .choice-container{
+    min-width: 40rem;
+  }
+
+}
+
