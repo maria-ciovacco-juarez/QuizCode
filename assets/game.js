@@ -71,4 +71,18 @@ getNewQuestion = () => {
   accecptingAnswers = true
 }
 
-choices.forEach(choice)
+choices.forEach(choice => {
+  choice.addEventListener('click', e => {
+    if(!accecptingAnswers) return
+
+    accecptingAnswers = false
+    const selectedChoice = e.target
+    const selectedAnswer = selectedChoice.dataset['number']
+
+    let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' :
+
+    if(classToApply === "correct"){
+      incrementScore(scorePoints)
+    }
+  })
+})
