@@ -1,11 +1,11 @@
 const question = document.querySelector('#question')
-const choices = document.querySelector(',choice-text')
+const choices = document.querySelector('.choice-text')
 const progressText = document.querySelector('#progressText')
 const scoreText = document.querySelector('#score')
 const progressBarFull = document.querySelector('#progressBarFull');
 
 let currentQuestion = {}
-let accecptingAnswers = true
+let acceptingAnswers = true
 let score = 0
 let questionCounter = 0
 let availableQuestions = []
@@ -47,19 +47,19 @@ startGame = () => {
 }
 
 getNewQuestion = () => {
-  if(availableQuestions.length === 0 || questionsCounter > maxQuestions) {
+  if(availableQuestions.length === 0 || questionCounter > maxQuestions) {
     localStorage.setItem('mostRecentScore', score)
 
     return window.location.assign('/end.html')
   }
 
   questionCounter++
-  progressText.innerText = `Question ${questionCounter} of ${maxQuestions}`
+  progressText.innerText='Question ${questionCounter} of ${maxQuestions}'
   progressBarFull.style.width = `${(questionCounter/maxQuestions) * 100}%`
 
   const questionsIndex = Math.floor(Math.random () * availableQuestions.length)
   currentQuestion = availableQuestions[questionsIndex]
-  question.innerText = currentQuestion.question
+  question.innerText = currentQuestion.question;
 
   choices.forEach(choice => {
     const number = choice.dataset ['number']
@@ -68,32 +68,34 @@ getNewQuestion = () => {
 
   availableQuestions.splice(questionsIndex, 1)
 
-  accecptingAnswers = true
+  acceptingAnswers = true;
 }
-
-choices.forEach(choice => {
+Object.keys(choices).forEach(choice => {
   choice.addEventListener('click', e => {
-    if(!accecptingAnswers) return
+    if(!acceptingAnswers) return
 
-    accecptingAnswers = false
+    acceptingAnswers = false
     const selectedChoice = e.target
     const selectedAnswer = selectedChoice.dataset['number']
 
-    let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect'
-
+    let classToApply = selectedAnswer == currentQuestion.answer ? 'correct':'incorrect'
     if(classToApply === "correct") {
       incrementScore(scorePoints)
     }
 
     selectedChoice.parentElement.classList.add(classToApply)
 
-    setTimer (() => {
+    setTimeout (() => {
       selectedChoice.parentElement.classList.remove(classToApply)
       getNewQuestion()
 
-
-    }, 1000)
-
-
+     }, 1000)
   })
 })
+
+incrementScore = num => {
+  score +=num
+  scoreText.innerText = score
+}
+
+startGame()
