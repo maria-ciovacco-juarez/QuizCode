@@ -70,26 +70,28 @@ getNewQuestion = () => {
 
   acceptingAnswers = true;
 }
-Object.keys(choices).forEach(choice => {
+
+choices.forEach(choice => {
   choice.addEventListener('click', e => {
-    if(!acceptingAnswers) return
+      if(!acceptingAnswers) return
 
-    acceptingAnswers = false
-    const selectedChoice = e.target
-    const selectedAnswer = selectedChoice.dataset['number']
+      acceptingAnswers = false
+      const selectedChoice = e.target
+      const selectedAnswer = selectedChoice.dataset['number']
 
-    let classToApply = selectedAnswer == currentQuestion.answer ? 'correct':'incorrect'
-    if(classToApply === "correct") {
-      incrementScore(scorePoints)
-    }
+      let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect'
 
-    selectedChoice.parentElement.classList.add(classToApply)
+      if(classToApply === 'correct') {
+          incrementScore(SCORE_POINTS)
+      }
 
-    setTimeout (() => {
-      selectedChoice.parentElement.classList.remove(classToApply)
-      getNewQuestion()
+      selectedChoice.parentElement.classList.add(classToApply)
 
-     }, 1000)
+      setTimeout(() => {
+          selectedChoice.parentElement.classList.remove(classToApply)
+          getNewQuestion()
+
+      }, 1000)
   })
 })
 
