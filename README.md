@@ -18,7 +18,8 @@ Visit the quiz using this deployed link:
 Answer the questions and try to get a high score. If you answer wrong, five seconds gets deducted from the timer.
 
 ## Screenshot
-![Question Screenshot](./assets/images/QuizGame.png)
+![Question Screenshot]<img width="1466" alt="Screen Shot 2023-05-19 at 10 05 55 PM" src="https://github.com/maria-ciovacco-juarez/test-with-quizcode/assets/119270869/d1e1e727-6bf7-4235-8d76-18dcf112d3f7">
+
 
 
 ## Status
