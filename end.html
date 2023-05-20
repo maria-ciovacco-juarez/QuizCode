@@ -22,23 +22,24 @@
         <a href="highscores.html" class="play-btn" id="saveScoreBtn" onclick="saveHighScore(event)" disabled>Save</a>
       </form>
       <div class="button-container">
-        <button class="btn" id="playagain">
-          <a href="/game.html" id="play">Play Again</a>
-        </button>
-        <button class="custom-btn" id="homeBtn">
-          <a href="/" onclick="goHome()" class="btn">Go Home</a>
-        </button>
+        <button class="btn" id="playagain" onclick="playAgain()">Play Again</button>
+        <button class="custom-btn" id="homeBtn" onclick="goHome()">Go Home</button>
       </div>
     </div>
   </div>
 
-  <script src="/end.js"></script>
+  <script src="end.js"></script>
   <script>
+    function playAgain() {
+      window.location.href = "/game.html";
+    }
+
     function goHome() {
-      window.location.href = "./index.html";
+      window.location.href = "/index.html";
     }
   </script>
 </body>
 </html>
+
 
 
