@@ -21,12 +21,14 @@
         <input type="text" name="name" id="username" placeholder="Enter your name">
         <a href="highscores.html" class="play-btn" id="saveScoreBtn" onclick="saveHighScore(event)" disabled>Save</a>
       </form>
-      <button class="btn" id="playagain">
-        <a href="/game.html" id="play">Play Again</a>
-      </button>
-      <button class="custom-btn" id="homeBtn">
-        <a href="#" onclick="goHome()" class="btn">Go Home</a>
-      </button>
+      <div class="button-container">
+        <button class="btn" id="playagain">
+          <a href="/game.html" id="play">Play Again</a>
+        </button>
+        <button class="custom-btn" id="homeBtn">
+          <a href="/" onclick="goHome()" class="btn">Go Home</a>
+        </button>
+      </div>
     </div>
   </div>
 
@@ -38,4 +40,5 @@
   </script>
 </body>
 </html>
+
 
