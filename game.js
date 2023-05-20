@@ -38,7 +38,7 @@ let questions = [
   choice1: '<body>', 
   choice2:  '<h1>',  
   choice3: '<script>',  
-  answer: 1,
+  answer: 3,
 },
 ];
 
