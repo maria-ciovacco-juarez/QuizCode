@@ -50,5 +50,7 @@ SOFTWARE.
 
 ## Credits:
 -- tutor
+
 -- Brian Design on YouTube
+
 -- ChatGPT for syntax and some css styling
