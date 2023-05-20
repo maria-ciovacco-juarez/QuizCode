@@ -17,11 +17,15 @@
       <h1 id="finalScore">Leaderboard</h1>
       <ul id="highScoresList"></ul>
       <button id="back">
-        <a href="./index.html" class="btn">Go Home</a>
+        <a href="#" onclick="goHome()"class="btn">Go Home</a>
       </button>
     </div>
   </div>
 
-  <script src="highscores.js"></script>
+  <script src="highscores.js">
+    function goHome() {
+  window.location.href = "./index.html";
+    }
+  </script>
 </body>
 </html>
