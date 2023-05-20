@@ -51,6 +51,6 @@ SOFTWARE.
 ## Credits:
 -- tutor
 
--- Brian Design on YouTube
+-- Brian Design on YouTube, this video specifically https://www.youtube.com/watch?v=f4fB9Xg2JEY&t=331s&ab_channel=BrianDesign
 
 -- ChatGPT for syntax and some css styling
