@@ -11,7 +11,11 @@
   margin-left: 33%;
   padding: 15px 32px;
   font-size: 20px;
-  color: white;
+  color: rgb(248, 246, 246);
+}
+
+.homeText {
+  color: #000000;
 }
 
 #questionsDiv {
@@ -35,7 +39,7 @@
 h1 {
   font-size: 30px;
   text-align: center;
-  color: rgb(6, 39, 38);
+  color: rgb(247, 250, 250);
   margin-top: 40px;
   margin-bottom: 10px;
 }
@@ -88,7 +92,7 @@ h1 {
   padding-bottom: 20px;
   text-align: center;
   margin-bottom: 15px;
-  color: rgb(104, 202, 158);
+  color: rgb(98, 71, 170);
   border-radius: 15px;
 }
 
@@ -203,7 +207,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 30rem
+  max-width: 30rem;
+  border-radius: 30px;
 }
 
 input {
@@ -223,6 +228,10 @@ input::placeholder {
   margin-bottom: 3rem;
   width: 100%;
   outline: none;
+  padding-left: 100px;
+  padding-right: 100px;
+  border-radius: 80px;
+  box-shadow: 20px;
 }
 
 #end-text {
@@ -232,5 +241,56 @@ input::placeholder {
 }
 
 #saveScoreBtn {
-  vorder: none;
+  font-size: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 60px;
+  padding-right: 60px;
+  text-align: center;
+  margin-bottom: 15px;
+  color: rgb(104, 202, 158);
+  border-radius: 15px;
+  background-color: white;
+}
+
+#play{
+  border: none;
+ 
+ font-size: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 14px;
+  text-align: center;
+  margin-bottom: 15px;
+  color: rgb(104, 202, 158);
+  border-radius: 15px;
+}
+
+#homeBtn{
+  font-size: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 70px;
+  padding-right: 70px;
+  text-align: center;
+  margin-bottom: 15px;
+  color: rgb(104, 202, 158);
+  border-radius: 15px;
+}
+
+/* highscores */
+
+body {
+  color: #000000;
+}
+
+#highScoresList {
+  list-style: none;
+  margin-bottom: 4rem;
+}
+
+.high-score {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
 }
