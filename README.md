@@ -1,4 +1,4 @@
-# test-with-quizcode
+# QuizCode!
 QuizCode!
 
 ## Table of contents
