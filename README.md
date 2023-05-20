@@ -49,6 +49,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ## Credits:
+
+-- The color changing gradient in the background is courtesy of Bárbara Rodríguez https://codepen.io/baarbaracrr
 -- tutor
 
 -- Brian Design on YouTube, this video specifically https://www.youtube.com/watch?v=f4fB9Xg2JEY&t=331s&ab_channel=BrianDesign
