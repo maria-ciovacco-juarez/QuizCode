@@ -19,16 +19,15 @@
       <form class="end-form-container">
         <h2 id="end-text">Enter your name to save your score!</h2>
         <input type="text" name="name" id="username" placeholder="Enter your name">
-        <button class="play-btn" id="saveScoreBtn" type="submit" onclick="saveHighScore(event)" disabled>Save</button>
+        <a href="highscores.html" class="play-btn" id="saveScoreBtn" onclick="saveHighScore(event)" disabled>Save</a>
       </form>
       <button class="btn" id="playagain">
-      <a href="/game.html" id="play">Play Again</a>
+        <a href="/game.html" id="play">Play Again</a>
       </button>
       <button class="custom-btn" id="homeBtn" onclick="location.href='/';">Go Home</button>
-
     </div>
   </div>
 </body>
 
-<script src="end.js"></script>
+<script src="/end.js"></script>
 </html>

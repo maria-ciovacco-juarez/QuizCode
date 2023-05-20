@@ -3,6 +3,7 @@ const choices = Array.from(document.querySelectorAll('.choice-text'));
 const progressText = document.querySelector('#progressText');
 const scoreText = document.querySelector('#score');
 const progressBarFull = document.querySelector('#progressBarFull');
+const timerEl = document.querySelector("#timer");
 
 let currentQuestion = {};
 let acceptingAnswers = true;
@@ -31,11 +32,18 @@ let questions = [
     choice2: 'A block of code designed to perform a particular task',
     choice3: 'A container for storing data',
     answer: 3,
-  }
+  },
+{
+  question: 'Inside which HTML element do we put the javascript?', 
+  choice1: '<body>', 
+  choice2:  '<h1>',  
+  choice3: '<script>',  
+  answer: 1,
+},
 ];
 
 const scorePoints = 100;
-const maxQuestions = 3;
+const maxQuestions = 4;
 
 const startGame = () => {
   questionCounter = 0;
@@ -80,6 +88,11 @@ choices.forEach(choice => {
 
     if (classToApply === 'correct') {
       incrementScore(scorePoints);
+    } else {
+      timeleft -= 5; // Penalize 5 seconds for incorrect answer
+      if (timeleft < 0) {
+        timeleft = 0; // Ensure the timer does not go negative
+      }
     }
 
     selectedChoice.parentElement.classList.add(classToApply);
@@ -96,4 +109,25 @@ const incrementScore = num => {
   scoreText.innerText = score;
 };
 
+// Start time at 30 seconds.
+let timeleft = 30;
+let timerCheck;
+
+const setTime = () => {
+  timerEl.innerText = timeleft;
+
+  timerCheck = setInterval(() => {
+    timeleft--;
+
+    if (timeleft >= 0) {
+      timerEl.innerText = timeleft;
+    } else {
+      showScore();
+      timerEl.innerText = 0;
+      clearInterval(timerCheck);
+    }
+  }, 1000);
+};
+
 startGame();
+setTime();

@@ -7,7 +7,7 @@ const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
 
 const maxHighScores = 5;
 
-finalScore.innerText = mostRecentScore;
+finalScore.textContent = mostRecentScore.textContent;
 
 username.addEventListener('keyup', () => {
   saveScoreBtn.disabled = !username.value;
@@ -16,7 +16,7 @@ username.addEventListener('keyup', () => {
 const saveHighScore = e => {
   e.preventDefault();
   const score = {
-    score: mostRecentScore.innerText,
+    score: mostRecentScore.textContent,
     name: username.value
   };
 
@@ -29,5 +29,5 @@ const saveHighScore = e => {
   highScores.splice(maxHighScores);
 
   localStorage.setItem('highScores', JSON.stringify(highScores));
-  window.location.href = 'highscores.html'; // Replace with the desired page URL
+  window.location.href = '/highscores.html';
 };
