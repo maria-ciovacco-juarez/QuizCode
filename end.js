@@ -29,5 +29,5 @@ const saveHighScore = e => {
   highScores.splice(maxHighScores);
 
   localStorage.setItem('highScores', JSON.stringify(highScores));
-  window.location.assign('/');
+  window.location.href = 'highscores.html'; // Replace with the desired page URL
 };
